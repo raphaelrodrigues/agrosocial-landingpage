@@ -1,0 +1,2 @@
+module AgroSocialHelper
+end
