@@ -417,9 +417,9 @@ footer {
 
 
 #team {
-  background: url(/assets/apples-1.jpg)  center center fixed; 
+  background: url(/assets/farm_wallpaper2_blur.jpg)  center center fixed; 
   background-size: 100% auto;
-  color:#fff;
+  color:#000;
   position: relative;
   width: 100%;
   height: auto;
@@ -445,21 +445,21 @@ padding-bottom: 0px;
 display: inline-block;
 vertical-align: top;
 padding: 15px;
+color: #000;
 
 }
-
-
-
 
 #team span {
 display: block;
 padding-bottom: 5px;
-color:#fff;
+color:#000;
+font-size: 16px;
 }
 
 ul {
 list-style: none;
 }
 
-
-
+hr {
+  border-color: black;
+}
