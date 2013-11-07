@@ -177,58 +177,30 @@
         </div>
       </div>
 
-         <!-- Team -->
-        <div id ="team" class="team">
-
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4 col-md-offset-4 text-center">
-                <h2>Quem somos?</h2>
-                <hr>
-              </div>
-            </div>
-            <div class="row">
-            <div class="col-md-10 col-md-offset-2 text-center">
-              <div class="member">
-                <img src="http://1.gravatar.com/avatar/78761906ebce1fec8c400b976728f820?size=128" class="img-rounded">
-                  <h3 class="member-info">
-                    <span>Miguel Guimarães</span>
-                  </h3>
-              </div>
-              <div class="member">
-                <img src="http://1.gravatar.com/avatar/54fdb629aa36005d4b6216897e1a20c5?size=128" class="img-rounded">
-                  <h3 class="member-info">
-                    <span>Hélder Abreu</span>
-                  </h3>
-              </div>
-              <div class="member">
-                <img src="http://1.gravatar.com/avatar/78761906ebce1fec8c400b976728f820?size=128" class="img-rounded">
-                  <h3 class="member-info">
-                    <span>Miguel Guimarães</span>
-                  </h3>
-              </div>
-              <div class="member">
-                <img src="http://1.gravatar.com/avatar/78761906ebce1fec8c400b976728f820?size=128" class="img-rounded">
-                  <h3 class="member-info">
-                    <span>Miguel Guimarães</span>
-                  </h3>
-              </div>
-              <div class="member">
-                <img src="http://1.gravatar.com/avatar/78761906ebce1fec8c400b976728f820?size=128" class="img-rounded">
-                  <h3 class="member-info">
-                    <span>Miguel Guimarães</span>
-                  </h3>
-              </div>
-              </div>
-            </div>
-
-              
-          </div>
+<!-- Team -->
+<div id ="team" class="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 text-center">
+        <h2>Quem somos?</h2>
+        <hr>
+      </div>
+    </div>
+    <% @members.each_slice(5).each do |m| %>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2 text-center">
+        <% m.each do |member| %>
+        <div class="member">
+            <img src="http://1.gravatar.com/avatar/<%= member.hash_value %>?size=128" class="img-rounded">
+            <h3 class="member-info"><span><%= member.name %></span></h3>
         </div>
-        <!-- /TEAM -->
-
-
-
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+<!-- /TEAM -->
 
     <!-- Call to Action -->
     <div class="call-to-action">
