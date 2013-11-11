@@ -5999,6 +5999,7 @@ body.modal-open,
 
 .carousel {
   position: relative;
+  float: center;
 }
 
 .carousel-inner {

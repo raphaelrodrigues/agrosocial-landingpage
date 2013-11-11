@@ -126,15 +126,31 @@ body {
 /* Intro */
 
 .intro {
-  padding: 50px 0;
+  height: 670px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 /* Services */
 
 .services {
   background: #7fbbda;
-  padding: 50px 0;
+  padding: 145px 0;
   color: #ffffff;
+}
+
+.frame {
+  border: 1px solid black;
+  padding: 3px 3px 3px 3px;
+}
+
+.carrosel {
+  position: relative;
+  width: 650px;
+  height: auto;
+  left: 50%;
+  margin-left: -325px;
+  margin-bottom: 50px;
 }
 
 .service-item {
@@ -157,6 +173,10 @@ i.service-icon:hover {
   font-size: 68px;
 }
 
+i.twitter {
+  color: black;
+}
+
 i.twitter:hover {
   text-decoration: none;
   background-color: white;
@@ -167,6 +187,12 @@ i.facebook:hover {
   text-decoration: none;
   background-color: white;
   color: #384e92;
+}
+
+i.globe:hover {
+  text-decoration: none;
+  background-color: white;
+  color: blue;
 }
 
 /* Callout */
@@ -485,9 +511,4 @@ list-style: none;
   left: 0;
   right: 0;
   text-shadow: 0 0 3px black;
-}
-
-.no-effect:hover, .no-effect:link, .no-effect:visited {
-  text-decoration: none;
-  background-size: 0px;
 }

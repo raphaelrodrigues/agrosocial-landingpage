@@ -5,57 +5,11 @@
     <br>
     <h2>A semente do seu negócio</h2>
 
-    <a href="#intro" id="x" class="btn btn-flat btn-flat-white btn-bordered btn-lg">Mais informações</a>
+    <a href="#services" id="x" class="btn btn-flat btn-flat-white btn-bordered btn-lg">Mais informações</a>
   </div>
 </div>
 <!-- /Full Page Image Header Area -->
 
-<!-- Intro -->
-<div id="intro" class="intro">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3 text-center">
-        <h2>Agricultura, Pecuária, Pesca e Caça numa plataforma.</h2>
-        <p class="lead">Negocie, encontre emprego ou mão de obra, partilhe o seu conhecimento e as suas ideias...</p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- /Intro -->
-<div id ="portfolio" class="portfolio">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-md-offset-4 text-center">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4 col-md-offset-2 text-center">
-        <div class="portfolio-item">
-          <img class="img-portfolio img-responsive" src="/assets/fields/agricultura.jpg">
-        </div>
-      </div>
-      <div class="col-md-4 text-center">
-        <div class="portfolio-item">
-          <img class="img-portfolio img-responsive" src="/assets/fields/pecuaria.jpg">
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4 col-md-offset-2 text-center">
-        <div class="portfolio-item">
-          <img class="img-portfolio img-responsive" src="/assets/fields/pesca.jpg">
-        </div>
-      </div>
-      <div class="col-md-4 text-center">
-        <div class="portfolio-item">
-          <img class="img-portfolio img-responsive" src="/assets/fields/caca.jpg">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Services -->
 <div id="services" class="services">
   <div class="container">
     <div class="row">
@@ -103,6 +57,48 @@
     </div>
   </div>
 </div>
+
+<!-- Intro -->
+<div id="intro" class="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <h2>Agricultura, Pecuária, Pesca e Caça numa plataforma.</h2>
+        <br>
+        <p class="lead">Negocie, encontre emprego ou mão de obra, partilhe o seu conhecimento e as suas ideias...</p>
+        <br>
+      </div>
+    </div>
+  </div>
+
+<!-- /Intro -->
+<div  class="carrosel">
+<div id="carousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+  </ol>
+  <!-- Carousel items -->
+  <div class="frame">
+  <div class="carousel-inner">
+    <div class="active item"><img src="assets/farm_wallpaper18_blur.jpg">
+ 
+      </div>
+      <div class="item"><img src="assets/farm_wallpaper2_blur.jpg" alt="...">
+    
+      </div>
+      <div class="item"><img src="assets/farm_wallpaper_blur.jpg" alt="...">
+
+      </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Services -->
+
 <!-- /Services -->
 
 <!-- Callout -->
@@ -186,12 +182,8 @@
       <div class="col-md-10 col-md-offset-2 text-center">
         <% m.each do |member| %>
         <div class="member">
-        <a href="http://pt.linkedin.com/in/<%= member.nickname %>" target="_blank">
-          <% unless member.hash_value.empty? %>
-            <img src="http://1.gravatar.com/avatar/<%= member.hash_value %>?size=128" alt="<%= member.name %>" class="img-rounded">
-          <% else %>
+        <a href="#">
             <img alt="<%= member.name %>" class="img-rounded" src="/assets/members/<%= member.name_free %>.jpg">
-          <% end %>
           <h3 class="member-info"><span><%= member.name %></span></h3>
         </a>
 
@@ -226,7 +218,7 @@
         <ul class="list-inline">
           <li><a href="https://facebook.com/hmiguim" target="_blank"><i class="fa fa-facebook-square facebook fa-2x"></i></a></li>
           <li><a href="https://twitter.com/agro_social" target="_blank"><i class="fa fa-twitter-square twitter fa-2x"></i></a></li>
-          <li><i class="icon-dribbble icon-2x"></i></li>
+          <li><a href="https://agrosocial.pt" target="_blank"><i class="fa fa-globe globe fa-2x"></i></a></li>
         </ul>
         <hr>
         <p>Copyright &copy; AgroSocial 2013</p>
@@ -246,6 +238,12 @@
   $("#menu-close").click(function(e) {
       e.preventDefault();
       $("#sidebar-wrapper").toggleClass("active");
+  });
+</script>
+<script type="text/javascript">
+  $('.carousel').carousel({
+     interval: 4000,
+     pause: "hover"
   });
 </script>
 <script>
