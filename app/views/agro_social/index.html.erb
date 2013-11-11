@@ -1,5 +1,5 @@
 <!-- Full Page Image Header Area -->
-<div id="top" class="header">
+<div id="top" class="header" data-target="#top" data-slide-to="#services">
   <div class="vert-text">
     <h1>AgroSocial</h1>
     <br>
@@ -10,7 +10,7 @@
 </div>
 <!-- /Full Page Image Header Area -->
 
-<div id="services" class="services">
+<div id="services" class="services" data-target="#services" data-slide-to="#intro">
 <div class="vert-text">
   <div class="container">
     <div class="row">
@@ -61,7 +61,8 @@
 </div>
 
 <!-- Intro -->
-<div id="intro" class="intro">
+<div id="intro" class="intro"  data-target="#team" data-slide-to="#into">
+<div class="vert-text">
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3 text-center">
@@ -95,6 +96,7 @@
       </div>
   </div>
   </div>
+</div>
 </div>
 </div>
 </div>
@@ -171,7 +173,8 @@
 </div-->
 
 <!-- Team -->
-<div id ="team" class="team">
+<div id ="team" class="team" data-target="#team" data-slide-to="#top">
+<div class="vert-text">
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-md-offset-4 text-center">
@@ -179,16 +182,15 @@
         <hr>
       </div>
     </div>
-    <% @members.each_slice(5).each do |m| %>
-    <div class="row">
-      <div class="col-md-10 col-md-offset-2 text-center">
+    <% @members.each_slice(7).each do |m| %>
+    <div class="row" id="list_members">
+      <div class="text-center">
         <% m.each do |member| %>
         <div class="member">
         <a href="#">
             <img alt="<%= member.name %>" class="img-rounded" src="/assets/members/<%= member.name_free %>.jpg">
           <h3 class="member-info"><span><%= member.name %></span></h3>
         </a>
-
         </div>
         <% end %>
       </div>
@@ -196,23 +198,8 @@
     <% end %>
   </div>
 </div>
+</div>
 <!-- /TEAM -->
-
-<!-- Call to Action -->
-<div class="call-to-action">
-<div class="vert-text">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3 text-center">
-        <h3>The buttons below are impossible to resist.</h3>
-        <a href="#top" class="btn btn-flat btn-flat-info btn-bordered btn-lg   btn-default">Click Me!</a>
-        <a href="#top" class="btn btn-flat btn-flat-info btn-bordered btn-lg   btn-primary">Look at Me!</a>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<!-- /Call to Action -->
 
 <!-- Footer -->
 <footer>
@@ -232,10 +219,14 @@
 </footer>
 <!-- /Footer -->
 
+<a class="next_section_button" style="margin-bottom: 0px;" href="#services" data-slide="next"></a>
+
 <!-- Bootstrap core JavaScript -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
+
+
 
 <!-- Custom JavaScript for the Side Menu - Put in a custom JS file if you want to clean this up -->
 <script>
@@ -256,6 +247,7 @@
       $("#sidebar-wrapper").toggleClass("active");
   });
 </script>
+
 <script>
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {

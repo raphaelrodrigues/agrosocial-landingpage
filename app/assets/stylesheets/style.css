@@ -25,7 +25,7 @@ body {
 
 /* Side Menu */
 
-#sidebar-wrapper {
+.sidebar-wrapper {
   margin-right: -250px;
   right: 0;
   width: 250px;
@@ -94,7 +94,7 @@ body {
   z-index: 1;
 }
 
-#sidebar-wrapper.active {
+.sidebar-wrapper.active {
   right: 250px;
   width: 250px;
   -webkit-transition: all 0.4s ease 0s;
@@ -126,14 +126,29 @@ body {
 /* Intro */
 
 .intro {
-  height: 670px;
-  text-align: center;
-  margin-top: 20px;
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  color: black;
 }
 
 .text-center {
   margin-bottom: 35px;
 
+}
+
+.next_section_button{
+  display: block;
+  position: fixed;
+  left: auto;
+  right: 25px;
+  bottom: 25px;
+  background-image: url('/assets/btn_next_desktop.jpg');
+  width: 52px;
+  height: 52px;
+  margin-left: -26px;
+  z-index: 9999;
 }
 
 /* Services */
@@ -150,6 +165,8 @@ body {
 .frame {
   border: 1px solid black;
   padding: 3px 3px 3px 3px;
+  background-color: white;
+  position: relative;
 }
 
 .carrosel {
@@ -465,16 +482,19 @@ footer {
 *********************************************************************/
 
 
-#team {
+.team {
   background: url(/assets/farm_wallpaper2_blur.jpg)  center center fixed; 
   background-size: 100% auto;
   color:#000;
   position: relative;
   width: 100%;
-  height: auto;
   padding: 30px 0 20px;
   margin: 0 auto;
   z-index: 0;
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 ul {
@@ -519,4 +539,18 @@ list-style: none;
   left: 0;
   right: 0;
   text-shadow: 0 0 3px black;
+}
+
+#list_members {
+  position: relative;
+  width: 1120px;
+  left: 50%;
+  margin-left: -540px;
+}
+
+#list_members:last-child {
+  position: relative;
+  width: 1100px;
+  left: 50%;
+  margin-left: -550px;
 }
