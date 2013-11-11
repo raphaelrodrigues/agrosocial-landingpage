@@ -12,6 +12,10 @@ body {
   text-align: center;
 }
 
+#x {
+  margin-top: 75px;
+}
+
 .vert-text h1 {
   padding: 0;
   margin: 0;
@@ -153,6 +157,18 @@ i.service-icon:hover {
   font-size: 68px;
 }
 
+i.twitter:hover {
+  text-decoration: none;
+  background-color: white;
+  color: #2199f0;
+}
+
+i.facebook:hover {
+  text-decoration: none;
+  background-color: white;
+  color: #384e92;
+}
+
 /* Callout */
 
 .callout {
@@ -160,7 +176,7 @@ i.service-icon:hover {
   display: table;
   height: 400px;
   width: 100%;
-  background: url(/assets/bg5.jpg) no-repeat center center fixed; 
+  background: url(/assets/farm_wallpaper18_blur.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -170,7 +186,7 @@ i.service-icon:hover {
 /* Portfolio */
 
 .portfolio {
-  padding: 50px 0;
+  margin-bottom: 42px;
 }
 
 .portfolio-item {
@@ -180,7 +196,6 @@ i.service-icon:hover {
 .img-portfolio {
   margin: 0 auto;
 }
-
 
 /* Call to Action */
 
@@ -470,4 +485,9 @@ list-style: none;
   left: 0;
   right: 0;
   text-shadow: 0 0 3px black;
+}
+
+.no-effect:hover, .no-effect:link, .no-effect:visited {
+  text-decoration: none;
+  background-size: 0px;
 }

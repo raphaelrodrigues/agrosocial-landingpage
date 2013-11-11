@@ -351,7 +351,7 @@ img {
 }
 
 .img-rounded {
-  border-radius: 6px;
+  border-radius: 25px;
   border: 1px solid gray;
 }
 
@@ -573,6 +573,7 @@ ol ol {
 .list-inline {
   padding-left: 0;
   list-style: none;
+  background-color: white;
 }
 
 .list-inline > li {
@@ -1204,6 +1205,9 @@ pre code {
   }
   .col-md-offset-3 {
     margin-left: 25%;
+  }
+  .col-md-offset-3a {
+    margin-left: 30%;
   }
   .col-md-offset-4 {
     margin-left: 33.33333333333333%;

@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20131108015456) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "hash_value"
+    t.string   "hash_value", default: ""
     t.string   "nickname"
     t.string   "name_free"
   end
