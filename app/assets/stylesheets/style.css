@@ -131,6 +131,7 @@ body {
   width: 100%;
   position: relative;
   color: black;
+  background-color: #fbffd4;
 }
 
 .text-center {
@@ -143,7 +144,8 @@ body {
   left: auto;
   right: 25px;
   bottom: 25px;
-  background-image: url('/assets/btn_next_desktop.jpg');
+  background-image: url('/assets/down-arrow.png');
+  background-size: 52px;
   width: 52px;
   height: 52px;
   margin-left: -26px;
