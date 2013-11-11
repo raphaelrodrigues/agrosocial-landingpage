@@ -1200,6 +1200,9 @@ pre code {
   .col-md-offset-1 {
     margin-left: 8.333333333333332%;
   }
+  .col-md-offset-1a {
+    margin-left: 14%;
+  }
   .col-md-offset-2 {
     margin-left: 16.666666666666664%;
   }
@@ -1211,6 +1214,10 @@ pre code {
   }
   .col-md-offset-4 {
     margin-left: 33.33333333333333%;
+  }
+  .col-md-offset-4a {
+    margin-left: 39%;
+    margin-bottom: 3%;
   }
   .col-md-offset-5 {
     margin-left: 41.66666666666667%;
