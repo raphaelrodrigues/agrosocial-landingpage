@@ -1,15 +1,15 @@
 <div class="all">
-  <div id="teste" class="header">
+  <div id="top" class="header teste">
     <div class="vert-text">
       <h1>AgroSocial</h1>
       <br>
       <h2>A semente do seu negócio</h2>
 
-      <a href="#services" id="x" class="btn btn-flat btn-flat-white btn-bordered btn-lg">Mais informações</a>
+      <a href="#teste" id="x" class="btn btn-flat btn-flat-white btn-bordered btn-lg">Mais informações</a>
     </div>
   </div>
 
-  <div id="teste" class="services">
+  <div id="services" class="services teste">
     <div class="vert-text">
       <div class="container">
         <div class="row">
@@ -59,7 +59,7 @@
     </div>
   </div>
 
-  <div id="teste" class="intro">
+  <div id="intro" class="intro teste">
     <div class="vert-text">
       <div class="container">
         <div class="row">
@@ -98,7 +98,7 @@
     </div>
   </div>
 
-  <div id ="teste" class="team">
+  <div id ="team" class="team teste">
     <div class="vert-text">
       <div class="container">
         <div class="row">
@@ -143,19 +143,38 @@
 </div>
 
 
-<div class="next_section_button" style="margin-bottom: 0px;" onclick="goto_next_div()"></div>
+<div class="next_section_button" id="next" style="margin-bottom: 0px;"></div>
 
 <!-- Custom JavaScript for the Side Menu - Put in a custom JS file if you want to clean this up -->
 <script type="text/javascript">
-  function goto_next_div() {
-    var next;
-    if ( next === undefined ) {
-      next = $('#teste').next();
-    } else {
-      next = next.next();
+  function scrollToPosition(id) {
+    if (id !== undefined) {
+        $('html,body').animate({
+          scrollTop: $('#'+id).offset().top},
+        'slow');
     }
-
   }
+
+  $(function() {
+
+    //Create an Array of posts
+    var posts = $('.teste');
+    var position = 1; //Start Position
+    var next = $('#next');
+
+    //Better performance to use Id selectors than class selectors
+    next.click(function(evt) {
+        //Scroll to next position
+        n = posts[position++];
+        if(position > posts.length ) {
+          scrollToPosition(posts[0].id);
+          position=1;
+        } else {
+          scrollToPosition(n.id);
+        }
+    });
+  });
+
   $("#menu-close").click(function(e) {
       e.preventDefault();
       $("#sidebar-wrapper").toggleClass("active");
