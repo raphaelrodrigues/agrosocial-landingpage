@@ -138,6 +138,19 @@ body {
   margin-bottom: 35px;
 }
 
+.text-center ul, .text-center p {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.text-center ul {
+  float: left;
+}
+
+.text-center p {
+  float: right;
+}
+
 .next_section_button{
   display: block;
   position: fixed;
