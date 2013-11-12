@@ -5,7 +5,7 @@
       <br>
       <h2>A semente do seu negócio</h2>
 
-      <a href="#teste" id="x" class="btn btn-flat btn-flat-white btn-bordered btn-lg">Mais informações</a>
+      <a href="#services" id="x" class="btn btn-flat btn-flat-white btn-bordered btn-lg">Mais informações</a>
     </div>
   </div>
 
@@ -167,9 +167,9 @@
     next.click(function(evt) {
         //Scroll to next position
         n = posts[position++];
-        if(position > posts.length ) {
-          scrollToPosition(posts[0].id);
-          position=1;
+        if(position === posts.length ) {
+          scrollToPosition(n.id);
+          next.hide();
         } else {
           scrollToPosition(n.id);
         }
@@ -209,8 +209,8 @@
   });
 
   $(function() {
-     $(window).on('beforeunload', function() {
-    $(window).scrollTop(0);
-});
+    $(window).on('beforeunload', function() {
+      $(window).scrollTop(0);
+    });
   });
 </script>
