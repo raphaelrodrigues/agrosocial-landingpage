@@ -152,6 +152,20 @@ body {
   z-index: 9999;
 }
 
+.prev_section_button{
+  display: block;
+  position: fixed;
+  left: auto;
+  right: 25px;
+  bottom: 25px;
+  background-image: url('/assets/up-arrow.png');
+  background-size: 52px;
+  width: 52px;
+  height: 52px;
+  margin-left: -26px;
+  z-index: 9999;
+}
+
 /* Services */
 
 .services {
