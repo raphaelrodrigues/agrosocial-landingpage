@@ -20,35 +20,35 @@
       <div class="row">
         <div class="col-md-2 col-md-offset-1 text-center">
           <div class="service-item">
-            <i class="service-icon fa fa-shopping-cart"></i>
+            <i class="service-icon icon-shopping-cart"></i>
             <h4>Negócio</h4>
             <p>Encontre o melhor preço para o produto que procura ou divulgue os seus produtos a uma vasta comunidade.</p>
           </div>
         </div>
         <div class="col-md-2 text-center">
           <div class="service-item">
-            <i class="service-icon fa fa-male"></i>
+            <i class="service-icon icon-male"></i>
             <h4>Emprego</h4>
             <p>Encontre um emprego à medida das suas capacidades ou a mão de obra que precisa para aquela tarefa específica.</p>
           </div>
         </div>
         <div class="col-md-2 text-center">
           <div class="service-item">
-            <i class="service-icon fa fa-group"></i>
+            <i class="service-icon icon-group"></i>
             <h4>Conhecimento</h4>
             <p>Participe em workshops ou siga técnicos especializados na nossa academia. Partilhe conhecimento na sua área de interesse.</p>
           </div>
         </div>
         <div class="col-md-2 text-center">
           <div class="service-item">
-            <i class="service-icon fa fa-bullhorn"></i>
+            <i class="service-icon icon-bullhorn"></i>
             <h4>Divulgação</h4>
             <p>Divulgue a sua empresa, negócio ou produtos facilmente e a quem realmente interessa.</p>
           </div>
         </div>
         <div class="col-md-2 text-center">
           <div class="service-item">
-            <i class="service-icon fa fa-calendar-o"></i>
+            <i class="service-icon icon-calendar-empty"></i>
             <h4>Participação</h4>
             <p>Crie, promova e participe em eventos sociais ou profissionais.</p>
           </div>
@@ -128,9 +128,9 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3 text-center">
       <ul class="list-inline">
-        <li><a href="https://facebook.com/hmiguim" target="_blank"><i class="fa fa-facebook-square facebook fa-2x"></i></a></li>
-        <li><a href="https://twitter.com/agro_social" target="_blank"><i class="fa fa-twitter-square twitter fa-2x"></i></a></li>
-        <li><a href="https://agrosocial.pt" target="_blank"><i class="fa fa-globe globe fa-2x"></i></a></li>
+        <li><a href="https://facebook.com" target="_blank"><i class="icon-facebook facebook icon-2x"></i></a></li>
+        <li><a href="https://twitter.com/agro_social" target="_blank"><i class="icon-twitter twitter icon-2x"></i></a></li>
+        <li><a href="https://agrosocial.pt" target="_blank"><i class="icon-globe globe icon-2x"></i></a></li>
       </ul>
       <hr>
       <p>Copyright &copy; AgroSocial 2013</p>
@@ -141,3 +141,21 @@
 
 <div class="next_section_button" id="next" style="margin-bottom: 0px;"></div>
 <div class="prev_section_button" id="prev" style="margin-bottom: 0px;"></div>
+
+
+<script>
+   $('.carousel').carousel({
+     interval: 4000,
+     pause: "hover"
+  });
+
+   $("#menu-close").click(function(e) {
+      e.preventDefault();
+      $("#sidebar-wrapper").toggleClass("active");
+  });
+
+  $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#sidebar-wrapper").toggleClass("active");
+  });
+</script>
