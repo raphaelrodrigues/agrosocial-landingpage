@@ -14,3 +14,78 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function scrollToPosition(id) {
+    if (id !== undefined) {
+        $('html,body').animate({
+          scrollTop: $('#'+id).offset().top},
+        'slow');
+    }
+  }
+
+  $(function() {
+
+    //Create an Array of posts
+    var posts = $('.scroller');
+    var position = 1; //Start Position
+    var next = $('#next');
+    var prev = $('#prev').hide();
+
+    //Better performance to use Id selectors than class selectors
+    next.click(function(evt) {
+        //Scroll to next position
+        n = posts[position++];
+        if(position === posts.length ) {
+          scrollToPosition(n.id);
+          next.hide();
+          prev.show();
+        } else {
+          scrollToPosition(n.id);
+        }
+    });
+
+    prev.click(function(evt) {
+      scrollToPosition(posts[0].id);
+      next.show();
+      prev.hide();
+      position=1;
+    });
+  });
+
+  $("#menu-close").click(function(e) {
+      e.preventDefault();
+      $("#sidebar-wrapper").toggleClass("active");
+  });
+
+  $('.carousel').carousel({
+     interval: 4000,
+     pause: "hover"
+  });
+
+  $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#sidebar-wrapper").toggleClass("active");
+  });
+
+  $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+          || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+
+  $(function() {
+    $(window).on('beforeunload', function() {
+      $(window).scrollTop(0);
+    });
+  });
