@@ -94,6 +94,43 @@ body {
   z-index: 9999;
 }
 
+/* Social Networks */
+#facebook, #gplus, #twitter, #contact {
+  width: 30px;
+  height: 30px;
+  background-size: 30px;
+  border-radius: 3px;
+}
+
+#facebook {
+  background-image: url('/assets/social_icons/fb_bw.jpg');
+}
+
+#facebook:hover {
+  background-image: url('/assets/social_icons/fb.jpg');
+}
+
+#gplus {
+  background-image: url('/assets/social_icons/gplus_bw.jpg');}
+
+#gplus:hover {
+  background-image: url('/assets/social_icons/gplus.jpg');
+}
+
+#twitter {
+  background-image: url('/assets/social_icons/twitter_bw.jpg');}
+
+#twitter:hover {
+  background-image: url('/assets/social_icons/twitter.jpg');
+}
+
+#contact {
+  background-image: url('/assets/social_icons/contact_bw.jpg');}
+
+#contact:hover {
+  background-image: url('/assets/social_icons/contact.jpg');
+}
+
 /* Services */
 
 .services {
@@ -165,7 +202,6 @@ i.globe:hover {
 /* Footer */
 
 footer {
-  padding: 100px 0;
 }
 
 /* Buttons Zone
