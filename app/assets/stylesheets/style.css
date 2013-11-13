@@ -94,6 +94,14 @@ body {
   z-index: 9999;
 }
 
+/* copyright */
+#copyright {
+  position: fixed;
+  z-index: 1;
+  left: 15px;
+  bottom: 10px;
+}
+
 /* Social Networks */
 #facebook, #gplus, #twitter, #contact {
   width: 30px;
