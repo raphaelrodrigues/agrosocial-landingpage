@@ -130,8 +130,9 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  color: black;
-  background-color: #fbffd4;
+  color: white;
+  /*background-color: #fbffd4;*/
+  background-color: #FCCC00;
 }
 
 .text-center {
