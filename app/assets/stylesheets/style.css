@@ -178,7 +178,6 @@ body {
 
 .myClose:hover {
     background-color: transparent;
-    background-image: url('/assets/fancybox_sprite@2x.png');
     background-size: 44px 152px;
 }
 
