@@ -133,10 +133,10 @@ body {
 }
 
 #contact {
-  background-image: url('/assets/social_icons/contact_bw.jpg');}
+  background-image: url('/assets/social_icons/url_bw.jpg');}
 
 #contact:hover {
-  background-image: url('/assets/social_icons/contact.jpg');
+  background-image: url('/assets/social_icons/url.jpg');
 }
 
 /* Services */
