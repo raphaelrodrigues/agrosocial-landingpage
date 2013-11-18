@@ -1,4 +1,5 @@
 /* Global Styles */
+
 html,
 body {
   height: 100%;
@@ -11,10 +12,6 @@ body {
   text-align: center;
 }
 
-.up {
-  margin-top: 75px;
-}
-
 .vert-text h1 {
   padding: 0;
   margin: 0;
@@ -22,76 +19,90 @@ body {
   font-weight: 700;
 }
 
-/* Full Page Image Header Area */
+/* Side Menu */
 
-.header {
-  display: table;
+#sidebar-wrapper {
+  margin-right: -250px;
+  right: 0;
+  width: 250px;
+  background: #00A75D;
+  position: fixed;
   height: 100%;
-  width: 100%;
-  position: relative;
-
-  background: url(/assets/farm_wallpaper_blur.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  overflow-y: auto;
+  z-index: 1000;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
-/* Intro */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-.intro {
-  display: table;
-  height: 100%;
-  width: 100%;
-  position: relative;
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}
+
+.sidebar-nav li a {
   color: white;
-  /*background-color: #fbffd4;*/
-  background-color: #FCCC00;
-}
-
-.text-center {
-  margin-bottom: 35px;
-}
-
-.text-center ul, .text-center p {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.text-center ul {
-  float: left;
-}
-
-.text-center p {
-  float: right;
-}
-
-.next_section_button{
   display: block;
-  position: fixed;
-  left: auto;
-  right: 25px;
-  bottom: 25px;
-  background-image: url('/assets/down-arrow.png');
-  background-size: 52px;
-  width: 52px;
-  height: 52px;
-  margin-left: -26px;
-  z-index: 9999;
+  text-decoration: none;
 }
 
-.prev_section_button{
-  display: block;
+.sidebar-nav li a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 55px;
+  line-height: 55px;
+  font-size: 18px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: white;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+#menu-toggle {
+  top: 0;
+  right: 0;
   position: fixed;
-  left: auto;
-  right: 25px;
-  bottom: 25px;
-  background-image: url('/assets/up-arrow.png');
-  background-size: 52px;
-  width: 52px;
-  height: 52px;
-  margin-left: -26px;
-  z-index: 9999;
+  background: #00A75D;
+  z-index: 1;
+}
+
+#sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.toggle {
+  margin: 5px 5px 0 0;
 }
 
 /* copyright */
@@ -139,30 +150,33 @@ body {
   background-image: url('/assets/social_icons/url.jpg');
 }
 
-/* Services */
+/* Full Page Image Header Area */
 
-.services {
+.header {
   display: table;
   height: 100%;
   width: 100%;
   position: relative;
+
+  background: url('/assets/farm_wallpaper_blur.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Intro */
+
+.intro {
+  padding: 50px 0;
+}
+
+/* Services */
+
+.services {
   background: #7fbbda;
+  padding: 50px 0;
   color: #ffffff;
-}
-
-.frame {
-  border: 1px solid black;
-  padding: 3px 3px 3px 3px;
-  background-color: white;
-  position: relative;
-}
-
-.carrosel {
-  position: relative;
-  width: 650px;
-  height: auto;
-  left: 50%;
-  margin-left: -325px;
 }
 
 .service-item {
@@ -177,7 +191,7 @@ i.service-icon {
   width: 140px;
   height: 140px;
   line-height: 136px;
-  vertical-align: middle; 
+  vertical-align: middle;
   text-align: center;
 }
 
@@ -185,31 +199,58 @@ i.service-icon:hover {
   font-size: 68px;
 }
 
-i.twitter {
-  color: black;
+/* Callout */
+
+.callout {
+  color: #000;
+  display: table;
+  height: auto;
+  width: 100%;
+  background: url('/assets/farm_wallpaper2_blur.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 20px 0 20px 0;
 }
 
-i.twitter:hover {
-  text-decoration: none;
-  background-color: white;
-  color: #2199f0;
+iframe {
+  width: 45%;
+  height: 360px;
+
 }
 
-i.facebook:hover {
-  text-decoration: none;
-  background-color: white;
-  color: #384e92;
+/* Portfolio */
+
+.portfolio {
+  padding: 50px 0;
 }
 
-i.globe:hover {
-  text-decoration: none;
-  background-color: white;
-  color: blue;
+.portfolio-item {
+  margin-bottom: 25px;
+}
+
+.img-portfolio {
+  margin: 0 auto;
+}
+
+
+/* Call to Action */
+
+.call-to-action {
+  color: #ffffff;
+  background: #0a5175;
+  padding: 50px 0;
+}
+
+.call-to-action .btn {
+  margin: 10px;
 }
 
 /* Footer */
 
 footer {
+  padding: 100px 0;
 }
 
 /* Buttons Zone
@@ -221,7 +262,6 @@ footer {
   font-weight: 700;
   font-size: 12px;
   padding: 10px 12px;
-  
 }
 .btn-lg {
   padding: 14px 16px;
@@ -240,7 +280,7 @@ footer {
 -------------------------------------------------- */
 .btn-flat-default,
 .btn-flat-default:hover,
-.btn-flat-default:active {      
+.btn-flat-default:active {
     border: 2px solid #bdc3c7;
 }
 
@@ -256,7 +296,7 @@ footer {
 
 .btn-flat-primary,
 .btn-flat-primary:hover,
-.btn-flat-primary:active {   
+.btn-flat-primary:active {
     border: 2px solid rgb(26, 188, 156);
 }
 
@@ -265,7 +305,7 @@ footer {
 
 .btn-flat-white,
 .btn-flat-white:hover,
-.btn-flat-white:active {   
+.btn-flat-white:active {
     border: 2px solid #fff;
 }
 
@@ -292,7 +332,7 @@ footer {
 
 .btn-flat-success,
 .btn-flat-success:hover,
-.btn-flat-success:active {    
+.btn-flat-success:active {
     border: 2px solid rgb(46, 204, 113);
 }
 
@@ -374,6 +414,7 @@ footer {
     border-radius: 0;
 }
 
+
 /********************************************************************
  Zona das FEATURES
 *********************************************************************/
@@ -382,6 +423,8 @@ footer {
     background-color: #eee;
     text-align:center;
 }
+
+
 
 #features h2 {
     font-weight:300;
@@ -424,79 +467,45 @@ footer {
  Zona da TEAM
 *********************************************************************/
 
-.team {
-  background: url(/assets/farm_wallpaper2_blur.jpg)  center center fixed; 
+
+#team {
+  background-color: #eee;
   background-size: 100% auto;
   color:#000;
   position: relative;
   width: 100%;
+  height: auto;
   padding: 30px 0 20px;
   margin: 0 auto;
   z-index: 0;
-  display: table;
-  height: 100%;
-  width: 100%;
-  position: relative;
+}
+
+#team img{
+  width: 100px;
+  height: 100px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+}
+
+#team ul {
+padding-bottom: 0px;
+}
+
+
+#team li {
+display: inline-block;
+vertical-align: top;
+padding: 15px;
+
+}
+
+#team span {
+display: block;
+padding-bottom: 5px;
+color:#000;
 }
 
 ul {
 list-style: none;
-}
-
-.member {
-  position: relative;
-  float: left;
-  width: 128px;
-  height: 128px;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 30px;
-}
-
-.member-img {
-  width: 128px;
-  height: 128px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.member-info {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 128px;
-  height: 128px;
-  margin: 0;
-  z-index: 10;
-  padding: 0;
-  text-align: center;
-}
-
-.member-info span {
-  font-size: 12px;
-  font-weight: normal;
-  color: white;
-  position: absolute;
-  bottom: 8px;
-  left: 0;
-  right: 0;
-  text-shadow: 0 0 3px black;
-}
-
-.row {
-  width: 1110px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#list_members:last-child {
-  width: 950px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.all {
-  width: 100%;
-  height: 100%;
 }

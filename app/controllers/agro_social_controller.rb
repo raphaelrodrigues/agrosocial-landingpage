@@ -1,5 +1,5 @@
 class AgroSocialController < ApplicationController
   def index
-  	@members = Members.order(name: :asc)
+  	@users = Users.order(name: :asc)
   end
 end
