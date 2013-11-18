@@ -25,7 +25,7 @@ body {
   margin-right: -250px;
   right: 0;
   width: 250px;
-  background: #00A75D;
+  background: gray;
   position: fixed;
   height: 100%;
   overflow-y: auto;
@@ -69,7 +69,7 @@ body {
 }
 
 .sidebar-nav > .sidebar-brand {
-  height: 55px;
+  height: 40px;
   line-height: 55px;
   font-size: 18px;
 }
@@ -87,7 +87,7 @@ body {
   top: 0;
   right: 0;
   position: fixed;
-  background: #00A75D;
+  background: #DDD;
   z-index: 1;
 }
 
@@ -105,12 +105,17 @@ body {
   margin: 5px 5px 0 0;
 }
 
+.position {
+  margin: 18px 15px 10px 10px;
+}
+
 /* copyright */
 #copyright {
   position: fixed;
   z-index: 1;
   left: 15px;
   bottom: 10px;
+  color: black;
 }
 
 /* Social Networks */
@@ -171,16 +176,35 @@ body {
   padding: 50px 0;
 }
 
+.myClose:hover {
+    background-color: transparent;
+    background-image: url('/assets/fancybox_sprite@2x.png');
+    background-size: 44px 152px;
+}
+
+a.negocio, a.emprego, a.conhecimento, a.participacao, a.divulgacao {
+  background: transparent;
+}
+
+a.negocio:visited, a.emprego:visited, a.conhecimento:visited, a.participacao:visited, a.divulgacao:visited {
+  text-decoration: none;
+}
+
+a.negocio:hover, a.emprego:hover,a.conhecimento:hover, a.participacao:hover, a.divulgacao:hover {
+  text-decoration: none;
+}
+
 /* Services */
 
 .services {
   background: #7fbbda;
   padding: 50px 0;
-  color: #ffffff;
+  color: white;
 }
 
 .service-item {
   margin-bottom: 15px;
+  color: white;
 }
 
 i.service-icon {
@@ -193,10 +217,13 @@ i.service-icon {
   line-height: 136px;
   vertical-align: middle;
   text-align: center;
+  color: white;
 }
 
 i.service-icon:hover {
   font-size: 68px;
+  color: #7fbbda;
+  background-color: white;
 }
 
 /* Callout */
@@ -204,7 +231,7 @@ i.service-icon:hover {
 .callout {
   color: #000;
   display: table;
-  height: auto;
+  height: 100px;
   width: 100%;
   background: url('/assets/farm_wallpaper2_blur.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -212,12 +239,6 @@ i.service-icon:hover {
   -o-background-size: cover;
   background-size: cover;
   padding: 20px 0 20px 0;
-}
-
-iframe {
-  width: 45%;
-  height: 360px;
-
 }
 
 /* Portfolio */
@@ -364,7 +385,7 @@ footer {
 
 .btn-flat-warning,
 .btn-flat-warning:hover,
-.btn-flat-warning:active {    
+.btn-flat-warning:active {
     border: 2px solid rgb(241, 196, 15);
 }
 
@@ -380,7 +401,7 @@ footer {
 
 .btn-flat-danger,
 .btn-flat-danger:hover,
-.btn-flat-danger:active {    
+.btn-flat-danger:active {
     border: 2px solid rgb(231, 76, 60);
 }
 
@@ -419,7 +440,7 @@ footer {
  Zona das FEATURES
 *********************************************************************/
 
-#features {    
+#features {
     background-color: #eee;
     text-align:center;
 }
@@ -431,7 +452,7 @@ footer {
     font-size:42px;
 }
 
-#features h3 {    
+#features h3 {
     text-transform:uppercase;
 }
 
@@ -441,7 +462,7 @@ footer {
 }
 
 #features i {
-    font-size:64px;  
+    font-size:64px;
     margin-top:30px;
     color:#555;
     -webkit-transition: all 0.25s ease;
@@ -490,6 +511,7 @@ footer {
 
 #team ul {
 padding-bottom: 0px;
+padding-left: 0px !important;
 }
 
 
