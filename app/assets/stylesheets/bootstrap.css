@@ -351,8 +351,7 @@ img {
 }
 
 .img-rounded {
-  border-radius: 25px;
-  border: 1px solid gray;
+  border-radius: 6px;
 }
 
 .img-thumbnail {
@@ -572,19 +571,13 @@ ol ol {
 
 .list-inline {
   padding-left: 0;
-  margin-top: 25px;
   list-style: none;
-  color: black;
 }
 
 .list-inline > li {
   display: inline-block;
   padding-right: 5px;
   padding-left: 5px;
-}
-
-a > img {
-  border-radius: 5px 5px 5px 5px;
 }
 
 dl {
@@ -753,7 +746,10 @@ pre code {
 }
 
 .container {
-  float: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .container:before,
@@ -1202,24 +1198,14 @@ pre code {
   .col-md-offset-1 {
     margin-left: 8.333333333333332%;
   }
-  .col-md-offset-1a {
-    margin-left: 14%;
-  }
   .col-md-offset-2 {
     margin-left: 16.666666666666664%;
   }
   .col-md-offset-3 {
     margin-left: 25%;
   }
-  .col-md-offset-3a {
-    margin-left: 30%;
-  }
   .col-md-offset-4 {
     margin-left: 33.33333333333333%;
-  }
-  .col-md-offset-4a {
-    margin-left: 39%;
-    margin-bottom: 3%;
   }
   .col-md-offset-5 {
     margin-left: 41.66666666666667%;
@@ -1246,8 +1232,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    min-width: 100%;
-    float: center;
+    max-width: 1170px;
   }
   .col-lg-1,
   .col-lg-2,
@@ -6009,7 +5994,6 @@ body.modal-open,
 
 .carousel {
   position: relative;
-  float: center;
 }
 
 .carousel-inner {
