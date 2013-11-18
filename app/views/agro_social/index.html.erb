@@ -135,9 +135,12 @@ $("#menu-toggle").click(function(e) {
 });
 
 $(function() {
-  $(document).keyup(function(event){
-    if(event.which == 27) { $('#sidebar-wrapper').removeClass('active'); }
-  });
+$(document).click(function(event){
+  var status = $(event.target);
+  if(status.attr('id') !== 'menu-toggle') {
+    $('#sidebar-wrapper').removeClass('active');
+  }
+});
   $(".negocio").fancybox({
     tpl: {
         closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>'
