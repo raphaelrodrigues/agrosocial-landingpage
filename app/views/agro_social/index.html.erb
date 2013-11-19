@@ -27,14 +27,10 @@
     </ul>
 
     <div id="mail-form">
-    <%= form_for @mail, :url => agro_social_save_mailer_path, :html => { :class => "form-inline" } do |f| %>
-    <div class="form-group">
-        <%= f.text_field :mail, :class => "form-control", :placeholder => "Dê-nos o seu email" %>
-      </div>
-    <div class="form-group">
-      <%= f.submit 'Subscrever', :class => "btn btn-primary" %>
-    </div>
-    <% end %>
+      <%= form_for @mail, :url => agro_social_save_mailer_path do |f| %>
+          <%= f.text_field :mail, :class => "form-control", :placeholder => "Seja avisado do lançamento da plataforma" %>
+        <%= f.submit 'Subscrever', :class => "btn btn-primary" %>
+      <% end %>
     </div>
 
     <div id="copyright">AgroSocial&copy 2013</div>
