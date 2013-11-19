@@ -2,7 +2,7 @@
 <a id="menu-toggle" href="#" class="btn btn-lg toggle"><i class="icon-reorder"></i></a>
 <div id="sidebar-wrapper">
   <ul class="sidebar-nav">
-  <button type="button" id="menu-close" class="close pull-right toogle position">&times</button>
+    <button type="button" id="menu-close" class="close pull-right toogle position">&times</button>
     <li class="sidebar-brand"><a href="http://agrosocial.pt" target="_blank">AgroSocial</a></li>
     <hr>
     <li><a href="#top">Início</a></li>
@@ -26,6 +26,17 @@
       <li><a href="https://agrosocial.pt" target="_blank"><div id="contact"></div></a></li>
     </ul>
 
+    <div id="mail-form">
+    <%= form_for @mail, :url => agro_social_save_mailer_path, :html => { :class => "form-inline" } do |f| %>
+    <div class="form-group">
+        <%= f.text_field :mail, :class => "form-control", :placeholder => "Dê-nos o seu email" %>
+      </div>
+    <div class="form-group">
+      <%= f.submit 'Subscrever', :class => "btn btn-primary" %>
+    </div>
+    <% end %>
+    </div>
+
     <div id="copyright">AgroSocial&copy 2013</div>
   </div>
 </div>
@@ -44,17 +55,17 @@
       <div class="row">
         <div class="col-md-2 col-md-offset-1 text-center">
           <div class="service-item">
-          <a class="negocio" data-fancybox-type="iframe" href="http://www.youtube.com/embed/ZLLiPwPsfjU?autoplay=1">
-            <i class="service-icon icon-shopping-cart"></i>
-          </a>
+            <a class="frame" data-fancybox-type="iframe" href="http://www.youtube.com/embed/ZLLiPwPsfjU?autoplay=1">
+              <i class="service-icon icon-shopping-cart"></i>
+            </a>
             <h4>Negócio</h4>
             <p>Encontre o melhor preço para o produto que procura ou divulgue os seus produtos a uma vasta comunidade.</p>
           </div>
         </div>
         <div class="col-md-2 text-center">
           <div class="service-item">
-          <a class="emprego" data-fancybox-type="iframe" href="http://www.youtube.com/embed/ZLLiPwPsfjU?autoplay=1">
-            <i class="service-icon icon-male"></i>
+            <a class="frame" data-fancybox-type="iframe" href="http://www.youtube.com/embed/ZLLiPwPsfjU?autoplay=1">
+              <i class="service-icon icon-male"></i>
             </a>
             <h4>Emprego</h4>
             <p>Encontre um emprego à medida das suas capacidades ou a mão de obra que precisa para aquela tarefa específica.</p>
@@ -62,17 +73,17 @@
         </div>
         <div class="col-md-2 text-center">
           <div class="service-item">
-          <a class="conhecimento" data-fancybox-type="iframe" href="http://www.youtube.com/embed/ZLLiPwPsfjU?autoplay=1">
-            <i class="service-icon icon-group"></i>
-             </a>
+            <a class="frame" data-fancybox-type="iframe" href="http://www.youtube.com/embed/ZLLiPwPsfjU?autoplay=1">
+              <i class="service-icon icon-group"></i>
+            </a>
             <h4>Conhecimento</h4>
             <p>Participe em workshops ou siga técnicos especializados na nossa academia. Partilhe conhecimento na sua área de interesse.</p>
           </div>
         </div>
         <div class="col-md-2 text-center">
           <div class="service-item">
-          <a class="divulgacao" data-fancybox-type="iframe" href="http://www.youtube.com/embed/ZLLiPwPsfjU?autoplay=1">
-            <i class="service-icon icon-bullhorn"></i>
+            <a class="frame" data-fancybox-type="iframe" href="http://www.youtube.com/embed/ZLLiPwPsfjU?autoplay=1">
+              <i class="service-icon icon-bullhorn"></i>
             </a>
             <h4>Divulgação</h4>
             <p>Divulgue a sua empresa, negócio ou produtos facilmente e a quem realmente interessa.</p>
@@ -80,8 +91,8 @@
         </div>
         <div class="col-md-2 text-center">
           <div class="service-item">
-          <a class="participacao" data-fancybox-type="iframe" href="http://www.youtube.com/embed/ZLLiPwPsfjU?autoplay=1">
-            <i class="service-icon icon-calendar-empty"></i>
+            <a class="frame" data-fancybox-type="iframe" href="http://www.youtube.com/embed/ZLLiPwPsfjU?autoplay=1">
+              <i class="service-icon icon-calendar-empty"></i>
             </a>
             <h4>Participação</h4>
             <p>Crie, promova e participe em eventos sociais ou profissionais.</p>
@@ -107,9 +118,9 @@
       <div class="col-md-12 text-center">
         <ul>
           <% m.each do |member| %>
-            <li><img src="/assets/team/<%= member.score_name %>.jpg" alt="<%= member.name %>" />
-              <span><%= member.name %></span>
-            </li>
+          <li><img src="/assets/team/<%= member.score_name %>.jpg" alt="<%= member.name %>" />
+            <span><%= member.name %></span>
+          </li>
           <% end %>
         </ul>
       </div>
@@ -117,109 +128,45 @@
     </div>
   </div>
 </div>
-<!-- /TEAM -->
+<!-- /Team -->
 
 <script type="text/javascript">
-$("#menu-close").click(function(e) {
-  e.preventDefault();
-  $("#sidebar-wrapper").toggleClass("active");
-});
-$("#menu-toggle").click(function(e) {
-  e.preventDefault();
-  $("#sidebar-wrapper").toggleClass("active");
-});
+  $("#menu-close").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+  });
+  $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+  });
 
-$(function() {
-$(document).click(function(event){
-  var status = $(event.target);
-  if(status.attr('id') !== 'menu-toggle') {
-    $('#sidebar-wrapper').removeClass('active');
-  }
-});
-  $(".negocio").fancybox({
-    tpl: {
+  $(function() {
+    $(document).click(function(event){
+      var status = $(event.target);
+      if(status.attr('id') !== 'menu-toggle') {
+        $('#sidebar-wrapper').removeClass('active');
+      }
+    });
+    $(".frame").fancybox({
+      tpl: {
         closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>'
-    },
-    maxWidth  : 800,
-    maxHeight : 600,
-    fitToView : false,
-    width   : '70%',
-    height    : '70%',
-    autoSize  : false,
-    closeClick  : true,
-    openEffect  : 'none',
-    closeEffect : 'none',
-    padding: 0,
-    modal: false
-  });
-  $(".emprego").fancybox({
-    tpl: {
-        closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>'
-    },
-    maxWidth  : 800,
-    maxHeight : 600,
-    fitToView : false,
-    width   : '70%',
-    height    : '70%',
-    autoSize  : false,
-    closeClick  : true,
-    openEffect  : 'none',
-    closeEffect : 'none',
-    padding: 0,
-    modal: false
-  });
-  $(".participacao").fancybox({
-    tpl: {
-        closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>'
-    },
-    maxWidth  : 800,
-    maxHeight : 600,
-    fitToView : false,
-    width   : '70%',
-    height    : '70%',
-    autoSize  : false,
-    closeClick  : true,
-    openEffect  : 'none',
-    closeEffect : 'none',
-    padding: 0,
-    modal: false
-  });
-  $(".divulgacao").fancybox({
-    tpl: {
-        closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>'
-    },
-    maxWidth  : 800,
-    maxHeight : 600,
-    fitToView : false,
-    width   : '70%',
-    height    : '70%',
-    autoSize  : false,
-    closeClick  : true,
-    openEffect  : 'none',
-    closeEffect : 'none',
-    padding: 0,
-    modal: false
-  });
-  $(".conhecimento").fancybox({
-    tpl: {
-        closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>'
-    },
-    maxWidth  : 800,
-    maxHeight : 600,
-    fitToView : false,
-    width   : '70%',
-    height    : '70%',
-    autoSize  : false,
-    closeClick  : true,
-    openEffect  : 'none',
-    closeEffect : 'none',
-    padding: 0,
-    modal: false
-  });
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-      || location.hostname == this.hostname) {
-      var target = $(this.hash);
+      },
+      maxWidth  : 800,
+      maxHeight : 600,
+      fitToView : false,
+      width   : '70%',
+      height    : '70%',
+      autoSize  : false,
+      closeClick  : true,
+      openEffect  : 'none',
+      closeEffect : 'none',
+      padding: 0,
+      modal: false
+    });
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+        || location.hostname == this.hostname) {
+        var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
@@ -229,5 +176,5 @@ $(document).click(function(event){
       }
     }
   });
-});
+  });
 </script>

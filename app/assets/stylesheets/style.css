@@ -19,6 +19,14 @@ body {
   font-weight: 700;
 }
 
+.form-inline .form-group .form-control {
+  width: 400px;
+}
+
+#mail-form {
+  margin-top: 50px;
+}
+
 /* Side Menu */
 
 #sidebar-wrapper {
@@ -181,15 +189,15 @@ body {
     background-size: 44px 152px;
 }
 
-a.negocio, a.emprego, a.conhecimento, a.participacao, a.divulgacao {
+a.frame {
   background: transparent;
 }
 
-a.negocio:visited, a.emprego:visited, a.conhecimento:visited, a.participacao:visited, a.divulgacao:visited {
+a.frame:visited {
   text-decoration: none;
 }
 
-a.negocio:hover, a.emprego:hover,a.conhecimento:hover, a.participacao:hover, a.divulgacao:hover {
+a.frame:hover {
   text-decoration: none;
 }
 
@@ -274,167 +282,6 @@ i.service-icon:hover {
 
 footer {
   padding: 100px 0;
-}
-
-/* Buttons Zone
- * -------------------------- */
-.btn {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 12px;
-  padding: 10px 12px;
-}
-.btn-lg {
-  padding: 14px 16px;
-  font-size: 14px;
-}
-.btn-sm,
-.btn-xs {
-  padding: 8px 10px;
-  font-size: 10px;
-}
-.btn-xs {
-  padding: 5px 8px;
-}
-
-/* Para eles ficarem flat
--------------------------------------------------- */
-.btn-flat-default,
-.btn-flat-default:hover,
-.btn-flat-default:active {
-    border: 2px solid #bdc3c7;
-}
-
-.btn-flat-default, .btn-flat-default.btn-bordered:hover {
-    background-color: #bdc3c7;
-    color: #ffffff;
-}
-
-.btn-flat-default:hover,  .btn-flat-default.btn-bordered {
-    background-color: transparent;
-    color: #bdc3c7;
-}
-
-.btn-flat-primary,
-.btn-flat-primary:hover,
-.btn-flat-primary:active {
-    border: 2px solid rgb(26, 188, 156);
-}
-
-/*    White Button
-*-------------------*/
-
-.btn-flat-white,
-.btn-flat-white:hover,
-.btn-flat-white:active {
-    border: 2px solid #fff;
-}
-
-.btn-flat-white, .btn-flat-white.btn-bordered:hover {
-    background-color: rgb(46, 204, 113);
-    color: #ffffff;
-}
-.btn-flat-white,  .btn-flat-white.btn-bordered {
-    background-color: transparent;
-    color: #fff;
-}
-
-/*-------------------*/
-
-.btn-flat-primary, .btn-flat-primary.btn-bordered:hover {
-    background-color: rgb(26, 188, 156);
-    color: #ffffff;
-}
-
-.btn-flat-primary:hover,  .btn-flat-primary.btn-bordered {
-    background-color: transparent;
-    color: rgb(26, 188, 156);
-}
-
-.btn-flat-success,
-.btn-flat-success:hover,
-.btn-flat-success:active {
-    border: 2px solid rgb(46, 204, 113);
-}
-
-.btn-flat-success, .btn-flat-success.btn-bordered:hover {
-    background-color: rgb(46, 204, 113);
-    color: #ffffff;
-}
-
-.btn-flat-success:hover,  .btn-flat-success.btn-bordered {
-    background-color: transparent;
-    color: rgb(46, 204, 113);
-}
-
-.btn-flat-info,
-.btn-flat-info:hover,
-.btn-flat-info:active {    
-    border: 2px solid rgb(52, 152, 219);
-}
-
-.btn-flat-info, .btn-flat-info.btn-bordered:hover {
-    background-color: rgb(52, 152, 219);
-    color: #ffffff;
-}
-
-.btn-flat-info:hover,  .btn-flat-info.btn-bordered {
-    background-color: transparent;
-    color: rgb(52, 152, 219);
-}
-
-.btn-flat-warning,
-.btn-flat-warning:hover,
-.btn-flat-warning:active {
-    border: 2px solid rgb(241, 196, 15);
-}
-
-.btn-flat-warning, .btn-flat-warning.btn-bordered:hover {
-    background-color: rgb(241, 196, 15);
-    color: #ffffff;
-}
-
-.btn-flat-warning:hover,  .btn-flat-warning.btn-bordered {
-    background-color: transparent;
-    color: rgb(241, 196, 15);
-}
-
-.btn-flat-danger,
-.btn-flat-danger:hover,
-.btn-flat-danger:active {
-    border: 2px solid rgb(231, 76, 60);
-}
-
-.btn-flat-danger, .btn-flat-danger.btn-bordered:hover {
-    background-color: rgb(231, 76, 60);
-    color: #ffffff;
-}
-
-.btn-flat-danger:hover,  .btn-flat-danger.btn-bordered {
-    background-color: transparent;
-    color: rgb(231, 76, 60);
-}
-
-.btn-flat-inverse,
-.btn-flat-inverse:hover,
-.btn-flat-inverse:active {    
-    border: 2px solid rgb(52, 73, 94);
-}
-
-.btn-flat-inverse, .btn-flat-inverse.btn-bordered:hover {
-    background-color: rgb(52, 73, 94);
-    color: #ffffff;
-}
-
-.btn-flat-inverse:hover,  .btn-flat-inverse.btn-bordered {
-    background-color: transparent;
-    color: rgb(52, 73, 94);
-}
-
-.btn-flat:not(.btn-rounded) {
-    border-radius: 0;
 }
 
 

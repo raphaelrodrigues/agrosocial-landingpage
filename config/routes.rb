@@ -1,6 +1,6 @@
 LandingAgroSocial::Application.routes.draw do
   get "agro_social/index"
-
+  post "agro_social/save_mailer"
   root :to => "agro_social#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
