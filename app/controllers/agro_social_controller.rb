@@ -6,7 +6,9 @@ class AgroSocialController < ApplicationController
 
   def save_mailer
   	@mail = Mail.new(params.require(:mail).permit(:mail))
-  	@mail.save
+  	if @mail.save
+  		flash[:message] = "Obrigado pela subscrição! Tenha uma bom dia"
+  	end
   	redirect_to root_path
   end
 end

@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AgroSocial</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+	<title>AgroSocial</title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
+	<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
 </head>
-  <body>
-
-    <%= yield %>
-
-  </body>
+<body>
+	<% unless flash.empty? %>
+		<% flash.each do |key, value| %>
+			<script type="text/javascript">
+				var jacked = humane.create({
+					baseCls: 'humane-jackedup',
+					addnCls: 'humane-jackedup-success',
+					timeout: 5000
+				})
+				jacked.log("<%= value %>")
+			</script>
+		<% end %>
+	<% end %>
+	<%= yield %>
+</body>
 </html>
