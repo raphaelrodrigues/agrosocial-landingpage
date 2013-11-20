@@ -24,8 +24,20 @@ body {
 }
 
 #mail-form input[type=text]{
-  width: 40%;
+  width: 34.99991%;
   display: inline-block;
+}
+
+#mail-form .label {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+#mail-form p.title {
+  color: white;
+  font-size: 15px;
 }
 
 /* Side Menu */

@@ -27,8 +27,9 @@
     </ul>
 
     <div id="mail-form">
+     <p class="title">Receba as nossas novidades</p>
       <%= form_for @mail, :url => agro_social_save_mailer_path do |f| %>
-          <%= f.text_field :mail, :class => "form-control", :placeholder => "Seja avisado do lançamento da plataforma" %>
+        <%= f.text_field :mail, :class => "form-control", :placeholder => "Deixe o seu email", :autocomplete => :off %>
         <%= f.submit 'Subscrever', :class => "btn btn-primary" %>
       <% end %>
     </div>
@@ -143,6 +144,34 @@
         $('#sidebar-wrapper').removeClass('active');
       }
     });
+
+    $("#new_mail").validate({
+      wrapper: "span",
+      errorElement: 'div',
+      errorClass: 'label',
+      rules: {
+        "mail[mail]": {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        "mail[mail]": {
+          required: "Introduza um email para receber novidades",
+          email: "O seu email não é válido!"
+        }
+      },
+      errorPlacement: function(error, element) {
+        console.log(element.next());
+            error.insertAfter(element.next());
+      },
+      highlight: function(element) {
+        $(element).closest('.form-control').removeClass('success').addClass('error');
+      },
+      success: function(element) {
+        element.addClass('valid').closest('.form-control').removeClass('error').addClass('success');
+      }
+    });
     $(".frame").fancybox({
       tpl: {
         closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>'
@@ -153,7 +182,7 @@
       width   : '70%',
       height    : '70%',
       autoSize  : false,
-      closeClick  : true,
+      closeClick  : false,
       openEffect  : 'none',
       closeEffect : 'none',
       padding: 0,
