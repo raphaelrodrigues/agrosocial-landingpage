@@ -1,5 +1,5 @@
 <!-- Side Menu -->
-<a id="menu-toggle" href="#" class="btn btn-lg toggle"><i class="icon-reorder"></i></a>
+<a id="menu-toggle" href="#" class="btn btn-lg toggle"><i id="icon-menu-toggle" class="icon-reorder"></i></a>
 <div id="sidebar-wrapper">
   <ul class="sidebar-nav">
     <button type="button" id="menu-close" class="close pull-right toogle position">&times</button>
@@ -21,7 +21,7 @@
     <br>
     <ul class="list-inline">
       <li><a href="https://www.facebook.com/386752774760741" target="_blank"><div id="facebook"></div></a></li>
-      <li><a href="https://plus.google.com" target="_blank"><div id="gplus"></div></a></li>
+      <li><a href="https://plus.google.com/106344021008787626515/posts" target="_blank"><div id="gplus"></div></a></li>
       <li><a href="https://twitter.com/agro_social" target="_blank"><div id="twitter"></div></a></li>
       <li><a href="https://agrosocial.pt" target="_blank"><div id="contact"></div></a></li>
     </ul>
@@ -139,7 +139,7 @@
   $(function() {
     $(document).click(function(event){
       var status = $(event.target);
-      if(status.attr('id') !== 'menu-toggle') {
+      if(status.attr('id') != 'menu-toggle' && status.attr('id') != 'icon-menu-toggle') {
         $('#sidebar-wrapper').removeClass('active');
       }
     });
