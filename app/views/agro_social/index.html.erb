@@ -28,14 +28,14 @@
 
     <div id="mail-form">
      <p class="title">Receba as nossas novidades</p>
-      <%= form_for @mail, :url => agro_social_save_mailer_path do |f| %>
-        <%= f.text_field :mail, :class => "form-control", :placeholder => "Deixe o seu email", :autocomplete => :off %>
-        <%= f.submit 'Subscrever', :class => "btn btn-primary" %>
-      <% end %>
-    </div>
+     <%= form_for @mail, :url => agro_social_save_mailer_path do |f| %>
+     <%= f.text_field :mail, :class => "form-control", :placeholder => "Deixe o seu email", :autocomplete => :off %>
+     <%= f.submit 'Subscrever', :class => "btn btn-primary" %>
+     <% end %>
+   </div>
 
-    <div id="copyright">AgroSocial&copy 2013</div>
-  </div>
+   <div id="copyright">AgroSocial&copy 2013</div>
+ </div>
 </div>
 <!-- /Full Page Image Header Area -->
 
@@ -163,7 +163,7 @@
       },
       errorPlacement: function(error, element) {
         console.log(element.next());
-            error.insertAfter(element.next());
+        error.insertAfter(element.next());
       },
       highlight: function(element) {
         $(element).closest('.form-control').removeClass('success').addClass('error');
@@ -186,20 +186,25 @@
       openEffect  : 'none',
       closeEffect : 'none',
       padding: 0,
-      modal: false
+      modal: false,
+      helpers: {
+        overlay: {
+          locked: false
+        }
+      }
     });
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-        || location.hostname == this.hostname) {
+      || location.hostname == this.hostname) {
         var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
       }
-    }
-  });
+    });
   });
 </script>
