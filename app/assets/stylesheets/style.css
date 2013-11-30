@@ -246,7 +246,7 @@ i.service-icon {
 i.service-icon:hover {
   font-size: 68px;
   color: #7fbbda;
-  background-color: white;
+  background: white;
 }
 
 /* Callout */
